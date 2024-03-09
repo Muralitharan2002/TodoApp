@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Macondo&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --orange: #ff5631;
+  --sandal: #cebea4;
+  --primary-font: "Poppins", sans-serif;
+}
+
+.box {
+  border-color: var(--sandal) !important;
+  width: 930px;
+  font-family: var(--primary-font);
+  color: var(--sandal) !important;
+}
+::placeholder {
+  color: #7b7060 !important;
+  font-size: 15px;
+}
+
+.left,
+.Sleft {
+  background-color: var(--orange);
+}
+.left {
+  height: 400px;
+}
+
+.input-field,
+.drop-down {
+  background-color: transparent;
+  border-color: var(--sandal);
+  color: var(--sandal);
+}
+.input-field:focus,
+.drop-down:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: var(--orange);
+  color: var(--sandal);
+}
+
+.log-btn,
+.log-btn:hover {
+  background-color: var(--orange);
+  outline: none;
+  border: none;
+  transition: 0.3s;
+}
+
+.log-btn:hover {
+  background-color: #fb6949;
+}
+
+.link {
+  cursor: pointer;
+  color: var(--sandal);
+}
+.link:hover {
+  text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+  .left {
+    height: 100px;
+    align-items: start;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .left {
+    height: 100px;
+    overflow: hidden;
+  }
+}
+
+.Sleft {
+  height: 450px;
+}
+
+@media (max-width: 768px) {
+  .Sleft {
+    height: 100px;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+.main-area {
+  font-family: var(--primary-font);
+  color: var(--sandal) !important;
+}
+
+.span {
+  color: var(--orange);
+}
+.log-out {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.log-out:hover {
+  color: var(--orange);
+}
+
+.plus-btn {
+  background-color: var(--orange);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.plus-btn:hover {
+  transform: rotate(90deg);
+}
+.line {
+  border-color: var(--orange) !important;
+}
+
+.task-border {
+  border-color: var(--sandal) !important;
+  background-color: #3b3834;
+  cursor: pointer;
+}
+
+.task {
+  text-decoration: line-through;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  transition: 0.2s;
+}
+
+.circle-outline {
+  border-color: var(--orange) !important;
+}
+
+.circle-fill {
+  border-color: #11b311 !important;
+  background-color: #11b311;
+}
+
+.editPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(13px);
+  transition: 0.1s ease-in-out;
+  /* opacity: 1; */
+}
+
+.btns {
+  background-color: var(--orange);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.empty {
+  width: 100%;
+}
