@@ -19,7 +19,9 @@ app.use(cookieParser());
 
 app.use("/router", route);
 
-
+app.get("/", async (req, res) => {
+    res.send("Server Working...")
+})
 
 
 
