@@ -11,7 +11,7 @@ const port = process.env.PORT;
 dbConnection();
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://todoapp-pi-ten.vercel.app"],
     credentials: true
 }));
 app.use(express.json());
