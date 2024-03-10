@@ -19,7 +19,7 @@ function TodoPage() {
 
     useEffect(() => {
         dispatch(getAllTodos())
-    }, []);
+    }, [dispatch]);
 
 
     const AllTodos = useSelector((state) => state.todos.todoArr);

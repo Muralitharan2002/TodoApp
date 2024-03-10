@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import axios from "axios"
 import "../Styles/style.css"
 
+import { Tooltip } from 'bootstrap'
+
 import { IoLogOut } from "react-icons/io5"
 import { toast } from 'react-toastify'
 
@@ -15,7 +17,7 @@ function Header() {
     const navigate = useNavigate();
     useEffect(() => {
         dispatch(getName())
-    }, [])
+    }, [dispatch])
 
     const logout = async () => {
         await axios.post("https://todo-server-ten-jade.vercel.app/router/logout", {}, { withCredentials: true })
@@ -40,7 +42,9 @@ function Header() {
             <h3>TODO <span className='span'>APP</span></h3>
             <div className=' d-flex align-items-center gap-lg-5 gap-3'>
                 <div className='fs-5'>{Name}</div>
-                <IoLogOut className=' fs-3 log-out' onClick={() => logout()} />
+                <Tooltip placement="left" bsPrefix="custom-tooltip" title="logout">
+                    <IoLogOut className=' fs-3 log-out' onClick={() => logout()} />
+                </Tooltip>
             </div>
         </div>
 
