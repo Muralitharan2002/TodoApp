@@ -8,7 +8,7 @@ function FilterBtns({ AllTodos }) {
     const [filterBtn, setFilterBtn] = useState("All tasks");
 
     const status = useSelector(state => state.todos.status)
-    console.log(status)
+    // console.log(status)
 
     // console.log("filtercom", AllTodos)
 

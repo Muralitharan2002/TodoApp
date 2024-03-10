@@ -34,7 +34,7 @@ function Login() {
             <div className="box-container container p-4 min-vh-100 d-flex align-items-center justify-content-center">
                 <div className='row border border-3 rounded-4 p-lg-3 p-2 d-flex align-items-center overflow-hidden box'>
                     <div className="left col-md-6 rounded-3 d-flex  justify-content-center">
-                        <img src={img} className="img-fluid  " alt="signup-page" />
+                        <img src={img} className="img-fluid  " alt="Login-page" />
                     </div>
                     <div className="right col-md-6 ps-lg-4">
                         <div className="row align-items-center">

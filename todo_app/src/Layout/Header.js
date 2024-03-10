@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import axios from "axios"
 import "../Styles/style.css"
 
-import { Tooltip } from 'bootstrap'
-
 import { IoLogOut } from "react-icons/io5"
 import { toast } from 'react-toastify'
 
@@ -42,9 +40,7 @@ function Header() {
             <h3>TODO <span className='span'>APP</span></h3>
             <div className=' d-flex align-items-center gap-lg-5 gap-3'>
                 <div className='fs-5'>{Name}</div>
-                <Tooltip placement="left" bsPrefix="custom-tooltip" title="logout">
-                    <IoLogOut className=' fs-3 log-out' onClick={() => logout()} />
-                </Tooltip>
+                <IoLogOut className=' fs-3 log-out' onClick={() => logout()} />
             </div>
         </div>
 
