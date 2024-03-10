@@ -12,7 +12,7 @@ function ResetPassword() {
 
     const ResetForm = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8000/router/ResetPass", { Email, Password }, { withCredentials: true })
+        await axios.post("https://todo-server-ten-jade.vercel.app/router/ResetPass", { Email, Password }, { withCredentials: true })
             .then((res) => {
                 if (res.data.status === "warning") {
                     toast.info("Already in use!");

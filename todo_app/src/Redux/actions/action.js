@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const URL = "http://localhost:8000/router";
+const URL = "https://todo-server-ten-jade.vercel.app/router";
 
 export const getName = createAsyncThunk("todos/getName", async () => {
     const Name = await axios.get(`${URL}/getName`, { withCredentials: true })

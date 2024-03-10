@@ -14,7 +14,7 @@ function Signup() {
 
     const FormDate = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8000/router/adduser", { Name, Email, Password }, { withCredentials: true })
+        await axios.post("https://todo-server-ten-jade.vercel.app/router/adduser", { Name, Email, Password }, { withCredentials: true })
             .then((res) => {
                 if (res.data.status === "warning") {
                     return toast.info("User Already Registered");
