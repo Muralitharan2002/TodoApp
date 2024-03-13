@@ -18,7 +18,7 @@ function Header() {
     }, [dispatch])
 
     const logout = async () => {
-        await axios.post("http://localhost:8200/router/logout", {}, { withCredentials: true })
+        await axios.post("https://todo-server-ten-jade.vercel.app/router/logout", {}, { withCredentials: true })
             .then((res) => {
                 if (res.data.status === "success") {
                     dispatch(logOut())
