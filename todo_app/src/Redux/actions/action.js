@@ -30,13 +30,14 @@ export const addTodo = createAsyncThunk("todos/addTodo", async (task) => {
 })
 
 export const stateChange = createAsyncThunk("todos/stateChange", async (todoId) => {
-    const added = await axios.post(`${URL}/stateChange`, { todoId }, { withCredentials: true });
+    const added = await axios.put(`${URL}/stateChange`, { todoId }, { withCredentials: true });
     return added.data.Todos_list;
 })
 
 export const deleteTodo = createAsyncThunk("todo/deteleTodo", async (todoId) => {
     // console.log("Modifyed Data : ", { todoId });
-    const Modified = await axios.post(`${URL}/deleteTodo`, { todoId }, { withCredentials: true });
+    const Id = todoId;
+    const Modified = await axios.delete(`${URL}/deleteTodo/${Id}`, { withCredentials: true });
     // console.log("Modifyed Data : ", Modified.data);
     return Modified.data.Todos_list;
 })

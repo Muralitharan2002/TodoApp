@@ -231,15 +231,16 @@ const stateChange = async (req, res) => {
 
 const deleteTodo = async (req, res) => {
     try {
-        const { todoId } = req.body;
+        const Id = req.params.Id;
+        // console.log(Id)
 
         const Email = req.data.Email;
 
         const target = await userTodos.findOne({ Email: Email });
 
         if (target) {
-            const targetTodo = target.Todos_list.findIndex(todo => todo._id.toString() === todoId);
-
+            const targetTodo = target.Todos_list.findIndex(todo => todo._id.toString() === Id);
+            // console.log(targetTodo)
             if (targetTodo >= 0) {
                 // console.log("target", targetTodo)
                 target.Todos_list.splice(targetTodo, 1);

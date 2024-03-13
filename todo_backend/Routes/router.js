@@ -8,7 +8,7 @@ const { addUser, userLogin, logout, forgotPassword, getName, getAllTodos, addTod
 
 route.post("/addUser", addUser);
 route.post("/userLogin", userLogin);
-route.post("/ResetPass", forgotPassword);
+route.put("/ResetPass", forgotPassword);
 route.post("/logout", authenticate, logout);
 
 
@@ -16,8 +16,8 @@ route.post("/logout", authenticate, logout);
 route.get("/getName", authenticate, getName);
 route.get("/getAllTodos", authenticate, getAllTodos);
 route.post("/addTodo", authenticate, addTodo);
-route.post("/stateChange", authenticate, stateChange);
-route.post("/deleteTodo", authenticate, deleteTodo)
+route.put("/stateChange", authenticate, stateChange);
+route.delete("/deleteTodo/:Id", authenticate, deleteTodo)
 route.put("/updateTodo", authenticate, updateTodo)
 
 module.exports = route;
