@@ -4,6 +4,8 @@ import List from '../Layout/List'
 import img from "../Assets/Empty.svg";
 import { useSelector } from 'react-redux'
 
+import { motion } from "framer-motion"
+
 function FilterBtns({ AllTodos }) {
     const [filterBtn, setFilterBtn] = useState("All tasks");
 
@@ -29,7 +31,11 @@ function FilterBtns({ AllTodos }) {
         <>
             <div>
                 <div className=' d-flex align-items-center justify-content-center'>
-                    <div className='line border-bottom container  border-2 pb-2  col-lg-6 d-flex align-items-center justify-content-between' >
+                    <motion.div className='line border-bottom container  border-2 pb-2  col-lg-6 d-flex align-items-center justify-content-between'
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
+                    >
                         <div>
                             <p className=''>Todos:</p>
                         </div>
@@ -40,7 +46,7 @@ function FilterBtns({ AllTodos }) {
                                 <option value="Completed tasks">Completed tasks</option>
                             </select>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

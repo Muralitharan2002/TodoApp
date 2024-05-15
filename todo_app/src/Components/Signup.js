@@ -5,6 +5,7 @@ import img3 from "../Assets/img1.svg"
 import axios from 'axios'
 
 import { toast } from 'react-toastify'
+import { motion } from "framer-motion"
 
 function Signup() {
     const navigate = useNavigate();
@@ -31,8 +32,11 @@ function Signup() {
     }
     return (
         <>
-
-            <div className="box-container container p-4 min-vh-100 d-flex align-items-center justify-content-center">
+            <motion.div className="box-container container p-4 min-vh-100 d-flex align-items-center justify-content-center"
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, type: "spring", stiffness: 250, damping: 100, delay: 0.5 }}
+            >
                 <div className='row border border-3 rounded-4 p-lg-3 p-2 d-flex align-items-center overflow-hidden box'>
                     <div className=" Sleft p-0 col-md-6  rounded-3 d-flex  justify-content-center overflow-hidden " >
                         <img src={img3} className="img-fluid" alt="loginpage" />
@@ -62,7 +66,7 @@ function Signup() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
         </>
     )
